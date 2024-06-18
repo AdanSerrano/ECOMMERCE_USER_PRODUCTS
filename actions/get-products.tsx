@@ -1,7 +1,7 @@
 import { Product } from "@/types";
 import qs from 'query-string'
 
-const URL = `${process.env.NEXT_PUBLIC_URL}/products`
+const URL = `${process.env.NEXT_PUBLIC_URL}/products/`
 
 interface Query {
     categoryId?: string,

@@ -30,8 +30,6 @@ export const Gallery = ({ images }: GalleryProps) => {
                                 src={image.url}
                                 alt='Image'
                                 className='object-cover object-center'
-                                width={500}
-                                height={500}
                             />
                         </div>
                     </TabPanel>

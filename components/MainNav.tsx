@@ -18,7 +18,7 @@ export const MainNav = ({ data }: MainNavProps) => {
         active: pathname === `/category/${route.id}`
     }))
     return (
-        <nav>
+        <nav className='ml-10 flex items-center justify-center'>
             {routes.map((route) => (
                 <Link
                     key={route.href}

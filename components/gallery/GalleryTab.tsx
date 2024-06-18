@@ -20,8 +20,6 @@ export const GalleryTab = ({ image }: GalleryTabProps) => {
                             src={image.url}
                             alt='Image'
                             className='object-cover object-center'
-                            width={500}
-                            height={500}
                         />
                     </span>
                     <span className={cn("absolute inset-0 rounded-md right-2 ring-offset-2", selected ? "ring-black" : "ring-transparent")} />

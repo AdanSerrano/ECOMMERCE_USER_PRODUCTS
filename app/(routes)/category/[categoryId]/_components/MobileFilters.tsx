@@ -1,3 +1,5 @@
+'use client'
+
 import { Color, Size } from "@/types"
 import { Dialog, DialogPanel } from "@headlessui/react"
 import { Plus, X } from "lucide-react"
@@ -16,7 +18,7 @@ export const MobileFilters = ({ sizes, colors }: MobileFiltersProps) => {
     const [open, setOpen] = useState(false)
 
     const onOpen = () => setOpen(true)
-    const onClose = () => setOpen(true)
+    const onClose = () => setOpen(false)
 
     return (
         <>
