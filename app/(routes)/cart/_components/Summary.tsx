@@ -29,11 +29,11 @@ export const Summary = () => {
     }, 0)
 
     const onCheckout = async () => {
-        const response = await axios.post(`${process.env.NEXT_PUBLIC_URL}/order`, {
-            productId: items.map((item) => item.id)
-        })
+        const response = items.map((item) => item)
 
-        window.location = response.data.url;
+        console.log(response)
+
+        // window.location = response.data.url;
     }
     return (
         <div className="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8">
@@ -47,7 +47,7 @@ export const Summary = () => {
                     </div>
                     <Currency value={totalPrice} />
                 </div>
-                <Button onClick={onCheckout} className="w-full mt-6">
+                <Button disabled={items.length === 0} onClick={onCheckout} className="w-full mt-6">
                     Checkout
                 </Button>
             </div>
